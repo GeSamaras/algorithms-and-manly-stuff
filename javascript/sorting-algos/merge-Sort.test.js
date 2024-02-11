@@ -1,4 +1,4 @@
-const { mergeSort } = require('./merge-Sort.js'); // Assuming mergeSort function is implemented in mergeSort.js file
+const mergeSort = require('./merge-Sort.js');
 
 describe('Merge Sort', () => {
   test('Sorts an array of integers in ascending order', () => {
@@ -8,10 +8,10 @@ describe('Merge Sort', () => {
     const expectedOutput = [5, 6, 7, 11, 12, 13];
 
     // Sorting the input array
-    mergeSort(input, 0, input.length - 1);
+    const sortedArray = mergeSort(input);
 
     // Check if the input array is sorted correctly
-    expect(input).toEqual(expectedOutput);
+    expect(sortedArray).toEqual(expectedOutput);
   });
 
   test('Sorts an array of negative integers and zeros', () => {
@@ -21,10 +21,10 @@ describe('Merge Sort', () => {
     const expectedOutput = [-9, -4, -3, -1, 0];
 
     // Sorting the input array
-    mergeSort(input, 0, input.length - 1);
+    const sortedArray = mergeSort(input);
 
     // Check if the input array is sorted correctly
-    expect(input).toEqual(expectedOutput);
+    expect(sortedArray).toEqual(expectedOutput);
   });
 
   test('Sorts an array with repeated elements', () => {
@@ -34,10 +34,10 @@ describe('Merge Sort', () => {
     const expectedOutput = [1, 1, 2, 2, 3, 3];
 
     // Sorting the input array
-    mergeSort(input, 0, input.length - 1);
+    const sortedArray = mergeSort(input);
 
     // Check if the input array is sorted correctly
-    expect(input).toEqual(expectedOutput);
+    expect(sortedArray).toEqual(expectedOutput);
   });
 
   test('Sorts an already sorted array', () => {
@@ -47,9 +47,9 @@ describe('Merge Sort', () => {
     const expectedOutput = [1, 2, 3, 4, 5];
 
     // Sorting the input array
-    mergeSort(input, 0, input.length - 1);
+    const sortedArray = mergeSort(input);
 
     // Check if the input array is sorted correctly
-    expect(input).toEqual(expectedOutput);
+    expect(sortedArray).toEqual(expectedOutput);
   });
 });
