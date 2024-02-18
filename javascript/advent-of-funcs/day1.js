@@ -8,14 +8,26 @@ const summonPuzzleInput = async () => {
 
 const puzzleInput = await summonPuzzleInput();
 
-const sumReducer = (sum, num) => sum + num;
 
+// function used for convinience to sum the .reduce method
+// reduce takes the entire array and compresses it into a single value
+// the first argument is the function that will be used to compress the array
+// the second argument is the initial value of the sum
+const sumReducer = (sum, num) => sum + num; 
+
+
+// breaking down the group input into their individual strings first
+// .map to convert that into an array
+// .reduce to sum the array
 const getSumOfGroup = (group) => 
     group
         .split("\n")
-        .map(Number)
+        .map(Number) // parses the strings into numbers
         .reduce(sumReducer, 0);
 
+
+// most advent of code puzzles are strings
+// using .split is pretty much a given
 const numberGroups = puzzleInput.split("\n\n");
 
 // sum of each group
