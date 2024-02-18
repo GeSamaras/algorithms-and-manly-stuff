@@ -23,7 +23,7 @@ const getSumOfGroup = (group) =>
     group
         .split("\n")
         .map(Number) // parses the strings into numbers
-        .reduce(sumReducer, 0);
+        .reduce(sumReducer, 0); // adds the array together
 
 
 // most advent of code puzzles are strings
@@ -34,7 +34,8 @@ const numberGroups = puzzleInput.split("\n\n");
 const groupSums = numberGroups.map(getSumOfGroup);
 
 // largest sum
-const maxSum = Math.max(...groupSums);
+// since its an array of values, we can use the spread operator to get the max value
+const maxSum = Math.max(...groupSums); 
 
 
 //Part 2, finding the top 3 sums
