@@ -1,3 +1,6 @@
+const quickSort = require('./quicksort.js')
+
+
 describe('QuickSort', () => {
     it('should sort an array of numbers', () => {
       const unsortedArray = [5, 3, 7, 2, 9, 1, 6, 4, 8];

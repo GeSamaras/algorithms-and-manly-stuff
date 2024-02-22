@@ -46,4 +46,6 @@ function quickSort(arr) {
     }
   
     return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
-  }
+}
+
+module.exports = quickSort
